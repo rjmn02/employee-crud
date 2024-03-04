@@ -17,4 +17,4 @@ if (process.env.NODE_ENV !== 'production') globalThis.prisma = prisma
 
 //https://www.prisma.io/docs/orm/more/help-and-troubleshooting/help-articles/nextjs-prisma-client-dev-practices
 //ambot potangina
-//para dili daw sigeg instantiate ug prisma client, kani nalang i import na module sa uban nga file
+//para dili daw sigeg instantiate ug prisma client, kani nalang i import na module sa uban nga files
