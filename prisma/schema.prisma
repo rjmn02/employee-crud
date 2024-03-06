@@ -6,7 +6,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url = env("DATABASE_URL") // check .env file, kung wala pag create. DATABASE_URL = "postgresql://USERNAME:PASSWORD@localhost:PORT/DBNAME"
+  url = env("DATABASE_URL") // create .env file. DATABASE_URL = "postgresql://USERNAME:PASSWORD@localhost:PORT/DBNAME"
 }
 
 model Employee {
