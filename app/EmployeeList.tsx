@@ -28,6 +28,7 @@ export function EmployeeList() {
           <p>{employee.employeeType.name}</p>
           <p>{employee.addressline}</p>
           <p>{employee.employmentDate}</p>
+          <br />
         </div>
       ))}
     </div>
