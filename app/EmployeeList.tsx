@@ -1,23 +1,8 @@
 import React, { useEffect, useState } from 'react';
-
+import { Employee, Role, Department, EmployeeType} from '@/lib/employeeInterface';
 export function EmployeeList() {
 
-  interface Employee {
-    firstName: string;
-    middleName: string;
-    lastName: string;
-    addressline: string
-    roleId: number;
-    id: number;
-    employeeTypeId: number; 
-    employmentDate: string
-  }
 
-  interface Role {
-    title: string;
-    role: Role;
-  }
-  
   const [employees, setEmployees] = useState<Employee[]>([]);
 
   useEffect(() => {
@@ -40,7 +25,7 @@ export function EmployeeList() {
         <div key={employee.id}>
           <h2>{employee.firstName} {employee.middleName} {employee.lastName}</h2>
           <p>{employee.role.title}</p>
-          <p>{employee.employeeTypeId}</p>
+          <p>{employee.employeeType.name}</p>
           <p>{employee.addressline}</p>
           <p>{employee.employmentDate}</p>
         </div>

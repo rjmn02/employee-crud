@@ -4,12 +4,15 @@ import prisma from "@/lib/prisma";
 export async function GET(req: NextRequest) {
   const roles = await prisma.role.findMany({
     include: {
-      department: true
+      department: {
+        select: {
+          name: true
+        }
+      }
     }
   });
   return NextResponse.json(roles);
 }
-
 
 export async function POST(req: NextRequest) {
   const data = await req.json();

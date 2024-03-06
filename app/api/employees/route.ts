@@ -23,11 +23,7 @@ export async function POST(req: NextRequest) {
   const data = await req.json();
   
   const newEmployee = await prisma.employee.create({
-    data: {
-      firstName: data.firstName,
-      middleName: data.middleName,
-      lastName: data.lastName,
-    }
+    data: data
   });
 
   return NextResponse.json(newEmployee);
