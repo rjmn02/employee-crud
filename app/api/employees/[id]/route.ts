@@ -1,6 +1,5 @@
 import { NextResponse, NextRequest } from "next/server";
 import prisma from '@/lib/prisma';
-import { tree } from "next/dist/build/templates/app-page";
 
 export async function GET(req: NextRequest, {params}: {params: {id: string}}){
   const employeeId = parseInt(params.id, 10);
@@ -36,7 +35,10 @@ export async function PUT(req: NextRequest, {params}: {params: {id: string}}) {
       firstName: data.firstName || null,
       middleName: data.middleName || null,
       lastName: data.lastName || null,
+      email: data.email || null,
       addressline: data.addressline || null,
+      city: data.city || null,
+      barangay: data.barangay || null,
       role: data.role || null,
       employeeType: data.employeeType || null,
       employmentDate: data.employmentDate || null

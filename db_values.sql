@@ -8,7 +8,7 @@ INSERT INTO "Department" (id, name) VALUES
 (7, 'Customer Service');
 
 -- Insert into Role
-INSERT INTO "Role" (id, title, departmentId) VALUES
+INSERT INTO "Role" (id, title, "departmentId") VALUES
 (1, 'HR Manager', 2),
 (2, 'HR Director', 2),
 (3, 'Recruiter', 2),
