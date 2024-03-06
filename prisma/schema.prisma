@@ -14,7 +14,10 @@ model Employee {
   firstName        String
   middleName       String?
   lastName         String
+  email            String
   addressline      String
+  city             String
+  barangary        String?
   role             Role      @relation(fields: [roleId], references: [id])
   roleId           Int
   employeeType     EmployeeType @relation(fields: [employeeTypeId], references: [id])
