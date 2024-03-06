@@ -1,9 +1,22 @@
 import { NextResponse, NextRequest } from "next/server";
 import prisma from '@/lib/prisma';
+import { tree } from "next/dist/build/templates/app-page";
 
 export async function GET(req: NextRequest, {params}: {params: {id: string}}){
   const employeeId = parseInt(params.id, 10);
   const employees = await prisma.employee.findUnique({
+    include: {
+      role: {
+        select: {
+          title: true
+        }
+      },
+      employeeType: {
+        select: {
+          name: true
+        }
+      }
+    },
     where: {
       id: employeeId
     }

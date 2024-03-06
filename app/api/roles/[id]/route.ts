@@ -4,6 +4,9 @@ import prisma from '@/lib/prisma';
 export async function GET(req: NextRequest, {params}: {params: {id: string}}) {
   const roleId = parseInt(params.id, 10);
   const roles = await prisma.role.findUnique({
+    include: {
+      department: true
+    },
     where: {
       id: roleId
     }
