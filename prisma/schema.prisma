@@ -14,10 +14,10 @@ model Employee {
   firstName        String
   middleName       String?
   lastName         String
-  email            String
+  email            String //new
   addressline      String
-  city             String
-  barangay        String?
+  city             String //new
+  barangay        String? //new
   role             Role      @relation(fields: [roleId], references: [id])
   roleId           Int
   employeeType     EmployeeType @relation(fields: [employeeTypeId], references: [id])
