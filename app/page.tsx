@@ -1,14 +1,14 @@
 'use client'
 
-import { EmployeeList } from './EmployeeList';
-import { AddEmployee } from './AddEmployee';
+import { EmployeeManagement } from './components/EmployeeManagement';
 
 export default function Home() {
   return (
-    <div>
-      <h1>Employee Management System</h1>
-      <AddEmployee />
-      <EmployeeList />
-    </div>
+    <main className='max-w-7xl mx-auto mt-4'>
+      <div className='text-center my-5 flex-col gap-4'>
+      <h1 className='text-4xl font-bold'>Employee Management System</h1>
+      </div>
+      <EmployeeManagement/>
+    </main>
   );
 }

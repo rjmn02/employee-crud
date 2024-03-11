@@ -6,7 +6,12 @@ export async function GET(req: NextRequest){
     include: {
       role: {
         select: {
-          title: true
+          title: true,
+          department: {
+            select: {
+              name: true
+            }
+          }
         }
       },
       employeeType: {
