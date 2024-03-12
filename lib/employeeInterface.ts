@@ -51,8 +51,10 @@ export interface EmployeeFormProps {
 
 export interface ErrorModalProps {
   show: boolean;
+  message: string; // Add this line
 }
 
-export  interface SuccessModalProps {
+export interface SuccessModalProps {
   show: boolean;
+  message: string; // Add this line
 }

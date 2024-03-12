@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation'
 import { ErrorModal, SuccessModal } from './Modal';
 import { EmployeeForm } from './EmployeeForm';
 
+
 export function AddEmployee({onEmployeeAdded}: {onEmployeeAdded: () => void}) {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -160,8 +161,8 @@ export function AddEmployee({onEmployeeAdded}: {onEmployeeAdded: () => void}) {
         </dialog>
       )}
 
-      <SuccessModal show={showSuccessModal} />
-      <ErrorModal show={showErrorModal} />
+      <SuccessModal show={showSuccessModal} message="Employee was successfully Added." />
+      <ErrorModal show={showErrorModal} message="Error: Failed To Add Employee"/>
     </div>
   );
 }

@@ -18,7 +18,7 @@ export const EmployeeManagement = () => {
   return (
     <>
       <AddEmployee onEmployeeAdded={fetchEmployees} />
-      <EmployeeList employees={employees} />
+      <EmployeeList employees={employees} onEmployeeUpdated={fetchEmployees} />
     </>
   );
 };
